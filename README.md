@@ -94,11 +94,6 @@ src/
 ```
 
 ## Demo Credentials
-
-### Admin Login
-- Email: `admin@carrental.com`
-- Password: `password`
-
 ### User Login
 - Email: `john@example.com`
 - Password: `password`
