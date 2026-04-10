@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Dark Theme Colors */
+  --hyper-dark: #05070D;
+  --glass-dark: #0B0F1A;
+  --surface-dark: #111827;
+  --neon-blue: #3B82F6;
+  --neon-red: #EF4444;
+  --neon-orange: #F97316;
+  --text-primary: #FFFFFF;
+  --text-secondary: #9CA3AF;
+
+  /* Fonts */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Monaco', 'Menlo', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--hyper-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hyper-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--glass-dark);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-blue);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: var(--neon-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--neon-orange);
+}
+
+/* Buttons Base */
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Focus Styles for Accessibility */
+:focus-visible {
+  outline: 2px solid var(--neon-blue);
+  outline-offset: 2px;
+}
+
+/* Forms */
+input,
+textarea,
+select {
+  font-family: var(--font-sans);
+  background-color: var(--glass-dark);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+placeholder {
+  color: var(--text-secondary);
+}
+
+/* React DatePicker Styling */
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker {
+  background-color: var(--glass-dark);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+}
+
+.react-datepicker__header {
+  background-color: var(--surface-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day {
+  color: var(--text-secondary);
+  width: 2rem;
+  line-height: 2rem;
+}
+
+.react-datepicker__day:hover {
+  background-color: var(--neon-blue);
+  color: var(--text-primary);
+  border-radius: 0.25rem;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range {
+  background-color: var(--neon-blue);
+  color: var(--text-primary);
+  border-radius: 0.25rem;
+}
+
+.react-datepicker__month {
+  margin: 1rem;
+}
+
+.react-datepicker__current-month {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.react-datepicker__navigation {
+  border: none;
+  top: 1rem;
+}
+
+.react-datepicker__navigation--previous {
+  left: 1rem;
+}
+
+.react-datepicker__navigation--next {
+  right: 1rem;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: var(--neon-blue);
+}
+
+/* Select dropdown */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239CA3AF' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.5rem;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-0 { margin-top: 0 !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mx-auto { margin-left: auto !important; margin-right: auto !important; }
+
+/* Animations */
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite alternate;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: white;
+    color: #000;
+  }
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a,
+input,
+select,
+textarea {
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
