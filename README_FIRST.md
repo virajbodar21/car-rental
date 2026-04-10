@@ -183,9 +183,6 @@ npm run dev
 After running `node seed.js`, use these to login:
 
 ```
-Admin Login:
-  Email: admin@carrental.com
-  Password: password
 
 Regular User:
   Email: john@example.com
